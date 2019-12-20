@@ -1,0 +1,5 @@
+# Project exclude paths
+/target/
+/designPattern.iml
+/log/
+/.idea/
