@@ -55,7 +55,11 @@ public class DeepClone implements Serializable {
     public static void main(String[] args) {
 
         DeepClone deepClone = new DeepClone();
-        deepClone.setStr("AAAAA");
+        /**
+         * new String("AAAA") : 会创建2个对象，其中一个放到JVM字符常量池中，另个放到堆中，这个时候对这个值引用的指针指向堆中那个对象。
+         * 如果是 deepClone.setStr("AAAA");则会直接引用JVM常量池中的字符串对象。
+         */
+        deepClone.setStr(new String("AAAA"));
         deepClone.setNum(1000000001);
         System.out.println("原始对象：");
         System.out.println(deepClone.toString());
