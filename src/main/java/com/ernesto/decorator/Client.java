@@ -13,7 +13,7 @@ public class Client {
         System.out.println(conn.getConnection());
         conn = new MysqlConnection();
         System.out.println(conn.getConnection());
-        // Connetion
+        // 从数据库连接池中获取
         System.out.println("从数据库连接池中获取");
         DatabasePool pool = new DatabasePool(new MysqlConnection());
         Map<String, Object> connPool = pool.getConnPool();
